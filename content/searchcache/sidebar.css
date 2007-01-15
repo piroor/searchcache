@@ -1,0 +1,9 @@
+#stop-button {
+	min-width: 0;
+}
+
+treechildren::-moz-tree-image(Title) {
+  max-width:16px;
+  max-height:16px;
+}
+

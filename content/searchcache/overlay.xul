@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<?xml-stylesheet href="chrome://searchcache/content/skin.css" type="text/css"?>
+<overlay id="searchcache"
+xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul" 
+xmlns:html="http://www.w3.org/1999/xhtml"
+xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+>
+
+
+
+<keyset id="mainKeyset">
+    <key id="key_CacheSidebar" key="C" command="viewCacheSidebar"
+          modifiers="accel shift"/>
+  </keyset>
+
+  <menupopup id="viewSidebarMenu">
+		<menuitem observes="viewCacheSidebar"  key="key_CacheSidebar"/>
+  </menupopup>
+
+	<broadcasterset id="mainBroadcasterSet">
+		<broadcaster id="viewCacheSidebar"
+			autoCheck="false"
+			label="Cache"
+			type="checkbox" group="sidebar"
+			sidebarurl="chrome://searchcache/content/sidebar.xul"
+			sidebartitle="Cache"
+			oncommand="toggleSidebar('viewCacheSidebar');"/>
+	</broadcasterset>
+
+
+</overlay>
